@@ -38,7 +38,7 @@ Example usage:
 
 int main() {
 	uint8_t key[256];
-	CCryptoRand::Read(key, sizeof(key), [&] (float progress) {
+	CCryptoRand::Read(key, sizeof(key), [] (float progress) {
 		printf("\rMove the mouse around to generate a random key: %.2f%%", progress * 100.f);
 	});
 	printf("\rKey: ");
