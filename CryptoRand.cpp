@@ -12,7 +12,7 @@ void CCryptoRand::Read(uint8_t* key, uint32_t keySize, std::function<void(float 
 		key[i] ^= xorshift64.next();
 	}
 
-	uint8_t xorshift1024sSeed[128] = {};
+	uint8_t xorshift1024sSeed[128];
 
 	UMousePos lastMousePos = CMouse::InvalidMousePos;
 	for (size_t i = 0; i < sizeof(xorshift1024sSeed) * 80;) {
